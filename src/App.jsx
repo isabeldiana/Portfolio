@@ -1,7 +1,12 @@
 import "./App.css";
 import { IoLogoJavascript } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
-import { BsGithub } from "react-icons/bs";
+import {
+  BsArrowLeftCircle,
+  BsArrowLeftSquare,
+  BsFillArrowLeftCircleFill,
+  BsGithub,
+} from "react-icons/bs";
 import diploma from "../public/assets/diploma.pdf";
 import avatar from "../public/assets/avatar.jpeg";
 import {
@@ -84,7 +89,9 @@ function App() {
 
       <div className="card-1">
         <h1>Meus Projetos</h1>
-        <button onClick={handleUpdate}></button>
+        <button onClick={handleUpdate}>
+          <BsArrowLeftSquare size="20" />
+        </button>
         <div className="card-2">
           {data.map((projeto) =>
             projeto.name === "isabeldiana" ||
@@ -97,7 +104,7 @@ function App() {
                   </a>
                 </span>
 
-                <p>{projeto.description}</p>
+                <p className="block-with-text">{projeto.description}</p>
               </div>
             )
           )}

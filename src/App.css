@@ -68,6 +68,15 @@ img {
   color: #ededed;
 }
 
+ .card-1 button {
+  color: #064b60;
+  background-color:#064b60;
+  border: none;
+  display: flex;
+  padding: 8px;
+  
+}
+
 .descrition {
   padding: 5px;
   display: flex;
@@ -104,8 +113,6 @@ a {
   padding-top: 30px;
   text-align: left;
   font-size: 30px;
- 
-
 }
 
 .technologies h1 {
@@ -130,7 +137,6 @@ a {
 }
 .certificates h1 {
   padding: 15px 0;
- 
   text-align: left;
   font-size: 20px;
   color: white;
@@ -138,7 +144,6 @@ a {
 }
 
 .card-2 {
-
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -154,7 +159,7 @@ h2 {
   padding: 5px;
   font-size: 20px;
   text-align: left;
-  background-image: linear-gradient(to bottom, #011318, steelblue, turquoise);
+  background-image: linear-gradient(to bottom, #c9effa, rgb(61, 165, 250), rgb(234, 253, 251));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -187,7 +192,16 @@ h2 {
     flex-direction: column;
 
   }
+  .card-1 button {
+    color: #011318;
+    background-color:#064b60;
+    border: none;
+    display: flex;
+    padding: 8px;
+    
+  }
   .project{
     width: 80%;
   }
  }
+
