@@ -2,6 +2,8 @@ import "./App.css";
 import { IoLogoJavascript } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
+import diploma from "../public/assets/diploma.pdf";
+import avatar from "../public/assets/avatar.jpeg";
 import {
   FaCss3Alt,
   FaHtml5,
@@ -18,25 +20,28 @@ import api from "./services/api";
 
 function App() {
   const [data, setData] = useState([]);
+  const [show, setshow] = useState(true);
 
   useEffect(() => {
     api.get("repos").then(({ data }) => {
       setData(data);
     });
   }, []);
-
-  console.log(data.map((d) => d?.description));
+  function handleUpdate() {
+    setshow(!show);
+  }
+  console.log(show);
   return (
     <div className="container">
-      <section>
+      <section className={show ? "hidden" : ""}>
         <div className="card">
-          <img src="src/assets/logo.jpeg" />
+          <img src={avatar} />
           <h1>Isabel Diana Pereira de Lima</h1>
 
           <p>Front-end developer</p>
           <p>Formada em Analise e desenvolvimento de sistemas.</p>
         </div>
-        <div class="descrition">
+        <div className="descrition">
           <h1>Contatos:</h1>
 
           <p>
@@ -71,7 +76,7 @@ function App() {
           >
             <TbCertificate /> Trilha Fundamentar - Rocketseat
           </a>
-          <a href="src/assets/diploma.pdf" target="_blank">
+          <a href={diploma} target="_blank">
             <FaUniversity /> Diploma -Uniasselvi
           </a>
         </div>
@@ -79,19 +84,23 @@ function App() {
 
       <div className="card-1">
         <h1>Meus Projetos</h1>
+        <button onClick={handleUpdate}></button>
         <div className="card-2">
-          {data.map((projeto) => (
-            <div className="project" key={projeto.id}>
-              <span>
-                <h2>{projeto.name}</h2>
-                <a href={projeto.html_url}>
-                  <FaGithub />
-                </a>
-              </span>
+          {data.map((projeto) =>
+            projeto.name === "isabeldiana" ||
+            projeto.name === "Portfolio" ? null : (
+              <div className="project" key={projeto.id}>
+                <span>
+                  <h2>{projeto.name}</h2>
+                  <a href={projeto.html_url}>
+                    <FaGithub />
+                  </a>
+                </span>
 
-              <p>{projeto.description}</p>
-            </div>
-          ))}
+                <p>{projeto.description}</p>
+              </div>
+            )
+          )}
         </div>
       </div>
     </div>
