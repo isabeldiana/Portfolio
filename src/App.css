@@ -58,6 +58,7 @@ img {
 }
 
 .card-1 {
+  
   padding-top: 20px;
   width: 100%;
   text-align: center;
@@ -69,12 +70,7 @@ img {
 }
 
  .card-1 button {
-  color: #064b60;
-  background-color:#064b60;
-  border: none;
-  display: flex;
-  padding: 8px;
-  
+  display: none;
 }
 
 .descrition {
@@ -155,6 +151,8 @@ a {
   justify-content: space-between;
 }
 
+
+
 h2 {
   padding: 5px;
   font-size: 20px;
@@ -166,7 +164,6 @@ h2 {
   color: black;
 }
 
-
 .project {
   text-align: left;
   font-size: 12px;
@@ -176,8 +173,13 @@ h2 {
   margin: 20px;
   min-height: 110px;
   width: 40%;
-  
 }
+.project p{
+  max-width: 250ch;
+  overflow: hidden;
+  white-space: initial;
+  text-overflow: ellipsis;
+ }
 
 @media screen and (max-width: 900px) {
   body{
@@ -205,3 +207,21 @@ h2 {
   }
  }
 
+ @media screen and (max-width: 600px) {
+
+ section{
+  width: 100%;
+
+ }
+ }
+ @media screen and (max-width: 400px) {
+  .card-1 button{
+  background-color: #c9effa;
+  right: 0;
+  position: absolute;
+  }
+  section{
+   width: 100%;
+   position: fixed;
+  }
+  }

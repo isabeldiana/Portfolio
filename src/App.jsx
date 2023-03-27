@@ -1,12 +1,9 @@
 import "./App.css";
 import { IoLogoJavascript } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
-import {
-  BsArrowLeftCircle,
-  BsArrowLeftSquare,
-  BsFillArrowLeftCircleFill,
-  BsGithub,
-} from "react-icons/bs";
+import { GoThreeBars } from "react-icons/go";
+import { AiOutlineCloseSquare } from "react-icons/ai";
+import { BsGithub } from "react-icons/bs";
 import diploma from "../public/assets/diploma.pdf";
 import avatar from "../public/assets/avatar.jpeg";
 import {
@@ -35,7 +32,7 @@ function App() {
   function handleUpdate() {
     setshow(!show);
   }
-  console.log(show);
+
   return (
     <div className="container">
       <section className={show ? "hidden" : ""}>
@@ -90,7 +87,11 @@ function App() {
       <div className="card-1">
         <h1>Meus Projetos</h1>
         <button onClick={handleUpdate}>
-          <BsArrowLeftSquare size="20" />
+          {show ? (
+            <AiOutlineCloseSquare size="20" />
+          ) : (
+            <GoThreeBars size="20" />
+          )}
         </button>
         <div className="card-2">
           {data.map((projeto) =>
@@ -100,11 +101,11 @@ function App() {
                 <span>
                   <h2>{projeto.name}</h2>
                   <a href={projeto.html_url}>
-                    <FaGithub />
+                    <FaGithub size="20" />
                   </a>
                 </span>
 
-                <p className="block-with-text">{projeto.description}</p>
+                <p>{projeto.description}</p>
               </div>
             )
           )}
