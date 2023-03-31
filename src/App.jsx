@@ -1,11 +1,12 @@
 import "./App.css";
+import { push as Sidebar } from "react-burger-menu";
 import { IoLogoJavascript } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
-import { GoThreeBars } from "react-icons/go";
-import { AiOutlineCloseSquare } from "react-icons/ai";
 import { BsGithub } from "react-icons/bs";
 import diploma from "../public/assets/diploma.pdf";
-import avatar from "../public/assets/avatar.jpeg";
+import avatar from "./assets/avatar.jpeg";
+import BlackWoman from "./assets/black-Woman.svg";
+import Woman from "./assets/woman.svg";
 import {
   FaCss3Alt,
   FaHtml5,
@@ -22,30 +23,36 @@ import api from "./services/api";
 
 function App() {
   const [data, setData] = useState([]);
-  const [show, setshow] = useState(true);
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleOnOpen = () => setMenuOpen(true);
+  const handleOnClose = () => setMenuOpen(false);
 
   useEffect(() => {
     api.get("repos").then(({ data }) => {
       setData(data);
     });
   }, []);
-  function handleUpdate() {
-    setshow(!show);
-  }
 
   return (
-    <div className="container">
-      <section className={show ? "hidden" : ""}>
+    <div id="outer-container">
+      <Sidebar
+        isOpen={menuOpen}
+        onOpen={handleOnOpen}
+        onClose={handleOnClose}
+        className="section"
+        pageWrapId={"page-wrap"}
+        outerContainerId={"outer-container"}
+      >
         <div className="card">
           <img src={avatar} />
           <h1>Isabel Diana Pereira de Lima</h1>
-
           <p>Front-end developer</p>
           <p>Formada em Analise e desenvolvimento de sistemas.</p>
         </div>
         <div className="descrition">
           <h1>Contatos:</h1>
-
           <p>
             <MdEmail size={15} color="blue" /> isabel_diana@outlook.com
           </p>
@@ -61,15 +68,6 @@ function App() {
           </a>
         </div>
 
-        <div className="technologies">
-          <h1>Tecnologias:</h1>
-          <FaReact color="lightblue" />
-          <IoLogoJavascript color="yellow" />
-          <FaHtml5 color="orange" />
-          <FaCss3Alt color="lightblue" />
-          <SiStyledcomponents color="pink" />
-          <AiFillGithub />
-        </div>
         <div className="certificates">
           <h1>Certificados:</h1>
           <a
@@ -82,18 +80,35 @@ function App() {
             <FaUniversity /> Diploma -Uniasselvi
           </a>
         </div>
-      </section>
-
-      <div className="card-1">
-        <h1>Meus Projetos</h1>
-        <button onClick={handleUpdate}>
-          {show ? (
-            <AiOutlineCloseSquare size="20" />
-          ) : (
-            <GoThreeBars size="20" />
-          )}
-        </button>
+      </Sidebar>
+      <div className="card-1" id="page-wrap">
+        <div className={`about ${menuOpen ? "aboutOpen" : " "}`}>
+          <img className="woman-1" src={BlackWoman} alt="" />
+          <div className="text">
+            <h1>Oi, sou Isabel Diana, Desenvolvedora Frontend</h1>
+            <p>
+              Graduada em Análise e Desenvolvimento de Sistemas na (UNIASSELVI).
+              Atualmente estudando tecnologias e ferramentas frontend.
+            </p>
+          </div>
+          <img className="woman-1" src={BlackWoman} alt="" />
+        </div>
+        <div className="technologies">
+          <img src={Woman} className="woman-2" alt="" />
+          <div className="tecnologies-content">
+            <h1>Tecnologias e ferramentas:</h1>
+            <div className="icons">
+              <FaReact color="lightblue" className="pulse-grow" />
+              <IoLogoJavascript className="pulse-grow" color="yellow" />
+              <FaHtml5 color="orange" className="pulse-grow" />
+              <FaCss3Alt color="lightblue" className="pulse-grow" />
+              <SiStyledcomponents color="pink" className="pulse-grow" />
+              <AiFillGithub className="pulse-grow" />
+            </div>
+          </div>
+        </div>
         <div className="card-2">
+          <h1> Projetos:</h1>
           {data.map((projeto) =>
             projeto.name === "isabeldiana" ||
             projeto.name === "Portfolio" ? null : (
