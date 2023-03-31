@@ -98,12 +98,18 @@ function App() {
           <div className="tecnologies-content">
             <h1>Tecnologias e ferramentas:</h1>
             <div className="icons">
-              <FaReact color="lightblue" className="pulse-grow" />
-              <IoLogoJavascript className="pulse-grow" color="yellow" />
-              <FaHtml5 color="orange" className="pulse-grow" />
-              <FaCss3Alt color="lightblue" className="pulse-grow" />
-              <SiStyledcomponents color="pink" className="pulse-grow" />
-              <AiFillGithub className="pulse-grow" />
+              <FaReact color="lightblue" className="pulse-grow-on-hover" />
+              <IoLogoJavascript
+                className="pulse-grow-on-hover"
+                color="yellow"
+              />
+              <FaHtml5 color="orange" className="pulse-grow-on-hover" />
+              <FaCss3Alt color="lightblue" className="pulse-grow-on-hover" />
+              <SiStyledcomponents
+                color="pink"
+                className="pulse-grow-on-hover"
+              />
+              <AiFillGithub className="pulse-grow-on-hover" />
             </div>
           </div>
         </div>
