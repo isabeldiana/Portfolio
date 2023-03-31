@@ -4,9 +4,9 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
 import diploma from "../public/assets/diploma.pdf";
-import avatar from "./assets/avatar.jpeg";
-import BlackWoman from "./assets/Black-Woman.svg";
-import Woman from "./assets/woman.svg";
+import avatar from "../public/assets/avatar.jpeg";
+import BlackWoman from "../public/assets/black-Woman.svg";
+import Woman from "../public/assets/woman.svg";
 import {
   FaCss3Alt,
   FaHtml5,
