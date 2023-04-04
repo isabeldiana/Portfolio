@@ -5,10 +5,8 @@
 }
 
 body {
-  background-color:  #373a47;
-  color: #ededed;
+  background-color: #373a47;
 }
-
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -26,126 +24,137 @@ body {
 
 .section {
   text-align: center;
-
 }
 
-.card h1{
-font-size: 21px;
-color: white;
-font-family: 'Raleway', sans-serif;
-margin-bottom: 5px;
-
+.card h1 {
+  font-size: 21px;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 5px;
 }
-.card  p{
+
+.card p {
   font-size: 12px;
   margin-top: 10px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: #ededed;
 }
- .card img {
+
+.card img {
   margin: 10px;
-  padding: 5px ;
+  padding: 5px;
   height: 100px;
   border-radius: 50%;
 }
 
 .card-1 {
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 20px;
   width: 100%;
   height: 100vh;
   text-align: center;
-
 }
-.card-2  h1, p{
-  font-family: 'Raleway', sans-serif;
+
+.card-2 h1,
+p {
+  font-family: "Raleway", sans-serif;
   color: #ededed;
 }
-.about{
-  font-family: 'Raleway', sans-serif;
+
+.about {
+  font-family: "Raleway", sans-serif;
   color: #ededed;
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.aboutOpen{
+
+.aboutOpen {
   margin-left: -20%;
   width: 75%;
 }
-.about  h1{
+
+.about h1 {
   font-size: 25px;
   text-align: left;
   margin-left: 4%;
-  font-family: 'Raleway', sans-serif;
-color: #ededed;
+  font-family: "Raleway", sans-serif;
+  color: #ededed;
 }
-.about  p{
- 
+
+.about p {
   width: 80%;
   margin: 16px;
   font-size: 16px;
-  font-family: 'Raleway', sans-serif;
-color: #ededed;
+  font-family: "Raleway", sans-serif;
+  color: #ededed;
 }
+
 .about .woman-1 {
   width: 500px;
 }
 
-.about .woman-1:first-child{
+.about .woman-1:first-child {
   display: none;
 }
-.descrition {
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  text-align: left ;
-  color: #ffffff;
-  gap: 4px;
 
+.descrition {
+  bottom: 140px;
+  position: fixed;
+  text-align: left;
 }
+
 .descrition p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
   display: flex;
   align-items: center;
   gap: 3px;
+  color: #ededed;
 }
-.descrition h1{
-  margin: 15px 0;
+
+.descrition h1 {
+  font-family: "Roboto", sans-serif;
+  color: #ededed;
+  margin: 10px 0;
   font-size: 20px;
   text-align: left;
-  
 }
-a {
+
+.descrition a {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
   gap: 5px;
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: white;
+  color: #ededed;
 }
+
 .technologies {
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
+
 .technologies .woman-2 {
   margin-right: 80px;
   width: 500px;
 }
 
-.technologies h1 { 
+.technologies h1 {
   text-align: left;
-margin-bottom: 20px;
-margin-left: -18%;
-font-family: 'Raleway', sans-serif;
-color: #ededed;
+  margin-bottom: 20px;
+  margin-left: -18%;
+  font-family: "Raleway", sans-serif;
+  color: #ededed;
 }
 
-.icons 
-{
-
+.icons {
   width: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -157,12 +166,14 @@ color: #ededed;
     transform: scale(1.1);
   }
 }
+
 @keyframes pulse-grow-on-hover {
   to {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
 }
+
 .pulse-grow-on-hover {
   display: inline-block;
   vertical-align: middle;
@@ -170,7 +181,10 @@ color: #ededed;
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
-.pulse-grow-on-hover:hover, .pulse-grow-on-hover:focus, .pulse-grow-on-hover:active {
+
+.pulse-grow-on-hover:hover,
+.pulse-grow-on-hover:focus,
+.pulse-grow-on-hover:active {
   -webkit-animation-name: pulse-grow-on-hover;
   animation-name: pulse-grow-on-hover;
   -webkit-animation-duration: 0.3s;
@@ -183,29 +197,33 @@ color: #ededed;
   animation-direction: alternate;
 }
 
-.icons svg{
+.icons svg {
   font-size: 60px;
   margin: 12px;
 }
 
-.certificates{
-  padding: 5px;
-  padding-top: 30px;
+.certificates {
+  position: fixed;
+  bottom: 10px;
 }
 
-.certificates a{
+.certificates a {
+  font-family: "Roboto", sans-serif;
+  display: flex;
   margin: 5px;
   text-align: left;
-  font-size: 16px;
+  font-size: 14px;
   color: #add8e6;
   text-align: left;
-  
+  text-decoration: none;
 }
+
 .certificates h1 {
-  padding: 15px 0;
+  font-family: "Roboto", sans-serif;
+  padding: 10px 0;
   text-align: left;
   font-size: 20px;
-  color: white;
+  color: #ededed;
   text-align: left;
 }
 
@@ -217,7 +235,8 @@ color: #ededed;
   align-items: center;
   justify-content: space-around;
 }
-.project span{
+
+.project span {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -227,7 +246,7 @@ color: #ededed;
   padding: 5px;
   font-size: 20px;
   text-align: left;
-  background-image: linear-gradient(to bottom, #c9effa, #3da5fa, #eafdfb);
+  background-image: linear-gradient(to bottom, #05323b, #232b31, #080808);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -235,24 +254,34 @@ color: #ededed;
 }
 
 .project {
+  background-color: #f5f7f8;
   text-align: left;
   font-size: 12px;
-  padding: 6px;
+  padding: 15px;
   border-radius: 8px;
   border: 1px solid #7c7d7e;
   margin: 20px;
-  min-height: 90px;
-  width: 60%;
+  height: 150px;
+  width: 30%;
 }
-.project p{
+
+.project p {
+  font-family: "Roboto", sans-serif;
+  color: #837f7f;
   max-width: 250ch;
   overflow: hidden;
   white-space: initial;
   text-overflow: ellipsis;
- }
+}
 
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
 
-  /* Position and sizing of burger button */
+/* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
   width: 26px;
@@ -289,14 +318,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
-  
 }
 
 /* General sidebar styles */
 .bm-menu {
   background-color: #161b22;
-
- 
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -309,6 +335,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: #b8b7ad;
   padding: 0.8em;
 }
+
 /* Individual item */
 .bm-item {
   display: inline-block;
@@ -320,45 +347,49 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 @media screen and (max-width: 1180px) {
- 
- .hidden{
+  .hidden {
     display: none;
   }
-  .card-2{
+
+  .card-2 {
     display: flex;
     flex-direction: column;
-
   }
+
   .card-1 button {
     color: #011318;
-    background-color:#064b60;
+    background-color: #064b60;
     border: none;
     display: flex;
     padding: 8px;
-    
   }
-  .about h1{
+
+  .about h1 {
     font-size: 25px;
     text-align: left;
-    }
-    .about p{
-      width: 95%;
-      font-size: 20px;
-      text-align: center;
-      }
-      .about .woman-1{
-        width: 50%;
-        margin-right: 0;
-      }
-.technologies .woman-2{
-  width: 50%;
-}
-  .project{
+  }
+
+  .about p {
+    width: 95%;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .about .woman-1 {
+    width: 50%;
+    margin-right: 0;
+  }
+
+  .technologies .woman-2 {
+    width: 50%;
+  }
+
+  .project {
     width: 80%;
   }
- }
+}
 
- @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .bm-burger-button {
     position: fixed;
     width: 26px;
@@ -367,73 +398,83 @@ Note: Beware of modifying this element as it can break the animations - you shou
     top: 34px;
   }
 
- .section{
-  width: 100%;
- }
- .card-1{
-  width: 100%;
- }
- .about  {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 28px;
-}
-.about h1{
-font-size: 25px;
-text-align: center;
-}
-.about p{
-  width: 95%;
-  font-size: 20px;
-  text-align: center;
+  .section {
+    width: 100%;
   }
-.about .woman-1{
-  width: 90%;
-  margin-right: 0;
-}
-.about .woman-1:first-child{
-  display: block;
-}
-.about .woman-1:last-child{
-  display: none;
-}
- .technologies {
+
+  .card-1 {
+    width: 100%;
+  }
+
+  .about {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 28px;
- }
- .technologies .woman-2 {
-  width: 90%;
-  margin-right: 0;
- }
+  }
 
- .technologies h1 { 
-  text-align: center;
-font-size: 25px;
-margin-left: 0;
-}
- .tecnologies-content{
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
- }
+  .about h1 {
+    font-size: 25px;
+    text-align: center;
+  }
 
-.card-2{
- margin-top: 30px;
-}
-.card-2 h1{
-  font-size: 22px;
-}
- .project{
-  width: 90%;
-}
+  .about p {
+    width: 95%;
+    font-size: 20px;
+    text-align: center;
+  }
 
+  .about .woman-1 {
+    width: 90%;
+    margin-right: 0;
+  }
+
+  .about .woman-1:first-child {
+    display: block;
+  }
+
+  .about .woman-1:last-child {
+    display: none;
+  }
+
+  .technologies {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+  }
+
+  .technologies .woman-2 {
+    width: 90%;
+    margin-right: 0;
+  }
+
+  .technologies h1 {
+    text-align: center;
+    font-size: 25px;
+    margin-left: 0;
+  }
+
+  .tecnologies-content {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-2 {
+    margin-top: 30px;
+  }
+
+  .card-2 h1 {
+    font-size: 22px;
+  }
+
+  .project {
+    width: 90%;
+  }
 }
- 

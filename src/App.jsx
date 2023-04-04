@@ -1,7 +1,7 @@
 import "./App.css";
 import { push as Sidebar } from "react-burger-menu";
 import { IoLogoJavascript } from "react-icons/io5";
-import { MdEmail } from "react-icons/md";
+import { SiMicrosoftoutlook } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
 import diploma from "../public/assets/diploma.pdf";
 import avatar from "./assets/avatar.jpeg";
@@ -49,21 +49,21 @@ function App() {
           <img src={avatar} />
           <h1>Isabel Diana Pereira de Lima</h1>
           <p>Front-end developer</p>
-          <p>Formada em Analise e desenvolvimento de sistemas.</p>
         </div>
         <div className="descrition">
           <h1>Contatos:</h1>
           <p>
-            <MdEmail size={15} color="blue" /> isabel_diana@outlook.com
+            <SiMicrosoftoutlook size={14} color="#0072c6" />
+            isabel_diana@outlook.com
           </p>
 
           <a href="https://github.com/isabeldiana" target="_blank">
-            <BsGithub color="black" size={15} />
+            <BsGithub color="black" size={14} />
             Github
           </a>
 
           <a href="https://www.linkedin.com/in/isabel-diana/" target="_blank">
-            <FaLinkedinIn color="blue" size={15} />
+            <FaLinkedinIn color=" #0e76a8" size={14} />
             Linkedin
           </a>
         </div>
@@ -115,21 +115,24 @@ function App() {
         </div>
         <div className="card-2">
           <h1> Projetos:</h1>
-          {data.map((projeto) =>
-            projeto.name === "isabeldiana" ||
-            projeto.name === "Portfolio" ? null : (
-              <div className="project" key={projeto.id}>
-                <span>
-                  <h2>{projeto.name}</h2>
-                  <a href={projeto.html_url}>
-                    <FaGithub size="20" />
-                  </a>
-                </span>
+          <div className="projects">
+            {" "}
+            {data.map((projeto) =>
+              projeto.name === "isabeldiana" ||
+              projeto.name === "Portfolio" ? null : (
+                <div className="project" key={projeto.id}>
+                  <span>
+                    <h2>{projeto.name}</h2>
+                    <a href={projeto.html_url}>
+                      <FaGithub size="20" />
+                    </a>
+                  </span>
 
-                <p>{projeto.description}</p>
-              </div>
-            )
-          )}
+                  <p>{projeto.description}</p>
+                </div>
+              )
+            )}
+          </div>
         </div>
       </div>
     </div>
