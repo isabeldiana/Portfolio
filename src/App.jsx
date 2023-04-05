@@ -4,7 +4,7 @@ import { SiMicrosoftoutlook } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
 import { GiCoffeeCup } from "react-icons/gi";
 import diploma from "../public/assets/diploma.pdf";
-import avatar from "./assets/avatar.jpeg";
+
 import BlackWoman from "./assets/black-Woman.svg";
 import Woman from "./assets/woman.svg";
 import {
@@ -20,7 +20,7 @@ import { SiStyledcomponents } from "react-icons/si";
 import { TbCertificate } from "react-icons/tb";
 import { useEffect, useState } from "react";
 import api from "./services/api";
-import { Link } from "react-router-dom";
+import Header from "./components/Header";
 
 function App() {
   const [data, setData] = useState([]);
@@ -33,18 +33,7 @@ function App() {
 
   return (
     <div>
-      <header>
-        <div className="profile">
-          <img src={avatar} />
-          <h1>Isabel Diana Pereira de Lima</h1>
-        </div>
-        <div className="menu">
-          <a href="#about">Sobre</a>
-          <a href="#project">Projetos</a>
-          <a href="#contact">Contatos</a>
-        </div>
-      </header>
-
+      <Header />
       <div className="card-1">
         <div className="about">
           <img className="woman-1" src={BlackWoman} alt="" />
