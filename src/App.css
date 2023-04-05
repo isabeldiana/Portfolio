@@ -1,62 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html{
-  scroll-behavior: smooth;
-}
-body {
-  
-  background-color: #373a47;
-}
 
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: grey;
-  border-radius: 10px;
-}
-header{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color:  #161b22;
-  width: 100%;
-
-}
-header img {
-  padding: 5px 0;
-  height: 80px;
-  border-radius: 50%;
-}
-header h1 {
- text-align: left;
- font-family: Raleway;  
- color: #ededed;
-}
-header .profile{
-  gap: 12px;
-  display: flex;
-  align-items: center;
-}
-header .menu{
-  display: flex;
-  align-items: center;
-}
-header .menu a{
-  margin: 10px;
-  font-size: 18px;
-  text-decoration: none;
-  color: #ededed;
-}
 /*
 .section {
   text-align: center;
@@ -130,52 +72,7 @@ header .menu a{
 }
 
 
-footer  {
-  background-color: #011318;
-  margin-top: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  text-align: center;
-  margin-top: 30px ;
- }
 
-footer .social-media{
-  width: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 10px 0 15px 0;
- 
-  }
-  footer  p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Raleway", sans-serif;
-    color: #ededed;
-    gap: 4px;
-  
-  }
-  
-footer .certificates a {
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  margin: 5px;
-  text-align: left;
-  font-size: 14px;
-  color: #add8e6;
-  text-align: left;
-  text-decoration: none;
-}
-
-footer .certificates h1 {
-  padding: 10px 0 15px 0;
-  text-align: left;
-  font-size: 22px;
-  font-family: "Raleway", sans-serif;
-  color: #ededed;
-}
 
 .card-2 {
   width: 100%;

@@ -1,27 +1,15 @@
 import "./App.css";
-import { IoLogoJavascript, IoLogoWhatsapp } from "react-icons/io5";
-import { SiMicrosoftoutlook } from "react-icons/si";
-import { BsGithub } from "react-icons/bs";
-import { GiCoffeeCup } from "react-icons/gi";
-import diploma from "../public/assets/diploma.pdf";
-
+import { IoLogoJavascript } from "react-icons/io5";
 import BlackWoman from "./assets/black-Woman.svg";
 import Woman from "./assets/woman.svg";
-import {
-  FaCss3Alt,
-  FaHtml5,
-  FaGithub,
-  FaLinkedinIn,
-  FaReact,
-  FaUniversity,
-} from "react-icons/fa";
+import { FaCss3Alt, FaHtml5, FaGithub, FaReact } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 import { SiStyledcomponents } from "react-icons/si";
-import { TbCertificate } from "react-icons/tb";
 import { useEffect, useState } from "react";
 import api from "./services/api";
 import Header from "./components/Header";
-
+import Footer from "./components/Footer";
+import GlobalStyle from "./styles/global";
 function App() {
   const [data, setData] = useState([]);
 
@@ -33,6 +21,7 @@ function App() {
 
   return (
     <div>
+      <GlobalStyle />
       <Header />
       <div className="card-1">
         <div className="about">
@@ -67,7 +56,7 @@ function App() {
                 color="pink"
                 className="pulse-grow-on-hover"
               />
-              <AiFillGithub className="pulse-grow-on-hover" />
+              <AiFillGithub className="pulse-grow-on-hover" color="white" />
             </div>
           </div>
         </div>
@@ -82,7 +71,7 @@ function App() {
                   <span>
                     <h2>{projeto.name}</h2>
                     <a href={projeto.html_url}>
-                      <FaGithub size="20" />
+                      <FaGithub color="black" size="20" />
                     </a>
                   </span>
 
@@ -93,44 +82,7 @@ function App() {
           </div>
         </div>
       </div>
-      <footer>
-        <div className="descrition">
-          <div className="social-media">
-            <a href="https://github.com/isabeldiana" target="_blank">
-              <BsGithub color="black" size={30} />
-            </a>
-            <a href="https://www.linkedin.com/in/isabel-diana/" target="_blank">
-              <FaLinkedinIn color=" #0e76a8" size={30} />
-            </a>
-            <a
-              href="https://api.whatsapp.com/send?phone=75988611282&text=Olá, boa tarde."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <IoLogoWhatsapp color="green" size={30} />
-            </a>
-            <a href="mailto:isabel_diana@outlook.com" target="_blank">
-              <SiMicrosoftoutlook size={30} color="#0072c6" />
-            </a>
-          </div>
-
-          <p>
-            Vai um cafezinho? <GiCoffeeCup size={20} color="#964b00" />{" "}
-          </p>
-        </div>
-        <div className="certificates">
-          <h1>Certificados:</h1>
-          <a
-            href="https://app.rocketseat.com.br/certificates/9cb12b79-8d0b-47ad-98eb-46d384b4a902"
-            target="_blank"
-          >
-            <TbCertificate /> Trilha Fundamentar - Rocketseat
-          </a>
-          <a href={diploma} target="_blank">
-            <FaUniversity /> Diploma -Uniasselvi
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
