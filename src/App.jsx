@@ -1,8 +1,8 @@
 import "./App.css";
-import { push as Sidebar } from "react-burger-menu";
-import { IoLogoJavascript } from "react-icons/io5";
+import { IoLogoJavascript, IoLogoWhatsapp } from "react-icons/io5";
 import { SiMicrosoftoutlook } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
+import { GiCoffeeCup } from "react-icons/gi";
 import diploma from "../public/assets/diploma.pdf";
 import avatar from "./assets/avatar.jpeg";
 import BlackWoman from "./assets/black-Woman.svg";
@@ -20,14 +20,10 @@ import { SiStyledcomponents } from "react-icons/si";
 import { TbCertificate } from "react-icons/tb";
 import { useEffect, useState } from "react";
 import api from "./services/api";
+import { Link } from "react-router-dom";
 
 function App() {
   const [data, setData] = useState([]);
-
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleOnOpen = () => setMenuOpen(true);
-  const handleOnClose = () => setMenuOpen(false);
 
   useEffect(() => {
     api.get("repos").then(({ data }) => {
@@ -36,59 +32,32 @@ function App() {
   }, []);
 
   return (
-    <div id="outer-container">
-      <Sidebar
-        isOpen={menuOpen}
-        onOpen={handleOnOpen}
-        onClose={handleOnClose}
-        className="section"
-        pageWrapId={"page-wrap"}
-        outerContainerId={"outer-container"}
-      >
-        <div className="card">
+    <div>
+      <header>
+        <div className="profile">
           <img src={avatar} />
           <h1>Isabel Diana Pereira de Lima</h1>
-          <p>Front-end developer</p>
         </div>
-        <div className="descrition">
-          <h1>Contatos:</h1>
-          <p>
-            <SiMicrosoftoutlook size={14} color="#0072c6" />
-            isabel_diana@outlook.com
-          </p>
-
-          <a href="https://github.com/isabeldiana" target="_blank">
-            <BsGithub color="black" size={14} />
-            Github
-          </a>
-
-          <a href="https://www.linkedin.com/in/isabel-diana/" target="_blank">
-            <FaLinkedinIn color=" #0e76a8" size={14} />
-            Linkedin
-          </a>
+        <div className="menu">
+          <a href="#about">Sobre</a>
+          <a href="#project">Projetos</a>
+          <a href="#contact">Contatos</a>
         </div>
+      </header>
 
-        <div className="certificates">
-          <h1>Certificados:</h1>
-          <a
-            href="https://app.rocketseat.com.br/certificates/9cb12b79-8d0b-47ad-98eb-46d384b4a902"
-            target="_blank"
-          >
-            <TbCertificate /> Trilha Fundamentar - Rocketseat
-          </a>
-          <a href={diploma} target="_blank">
-            <FaUniversity /> Diploma -Uniasselvi
-          </a>
-        </div>
-      </Sidebar>
-      <div className="card-1" id="page-wrap">
-        <div className={`about ${menuOpen ? "aboutOpen" : " "}`}>
+      <div className="card-1">
+        <div className="about">
           <img className="woman-1" src={BlackWoman} alt="" />
-          <div className="text">
+          <div className="text" id="about">
             <h1>Oi, sou Isabel Diana, Desenvolvedora Frontend</h1>
             <p>
-              Graduada em Análise e Desenvolvimento de Sistemas na (UNIASSELVI).
-              Atualmente estudando tecnologias e ferramentas frontend.
+              Sou formada em Análise e Desenvolvimento de Sistemas na
+              (UNIASSELVI). Estou em busca da minha primeira oportunidade como
+              desenvolvedora frontend. Sou um pessoa proativa, focada em
+              resultados, sempre em busca de aprender novas tecnologias e
+              conceitos. Estou anciosa para trabalhar em equipe, contribuir com
+              minhas habilidades e crescer profissionalmente em um ambiente
+              desafiador e estimulante.
             </p>
           </div>
           <img className="woman-1" src={BlackWoman} alt="" />
@@ -113,10 +82,21 @@ function App() {
             </div>
           </div>
         </div>
+        <div className="certificates">
+          <h1>Certificados:</h1>
+          <a
+            href="https://app.rocketseat.com.br/certificates/9cb12b79-8d0b-47ad-98eb-46d384b4a902"
+            target="_blank"
+          >
+            <TbCertificate /> Trilha Fundamentar - Rocketseat
+          </a>
+          <a href={diploma} target="_blank">
+            <FaUniversity /> Diploma -Uniasselvi
+          </a>
+        </div>
         <div className="card-2">
-          <h1> Projetos:</h1>
+          <h1 id="project"> Projetos:</h1>
           <div className="projects">
-            {" "}
             {data.map((projeto) =>
               projeto.name === "isabeldiana" ||
               projeto.name === "Portfolio" ? null : (
@@ -135,6 +115,32 @@ function App() {
           </div>
         </div>
       </div>
+      <footer>
+        <div className="descrition">
+          <div className="social-media">
+            <a href="https://github.com/isabeldiana" target="_blank">
+              <BsGithub color="black" size={30} />
+            </a>
+            <a href="https://www.linkedin.com/in/isabel-diana/" target="_blank">
+              <FaLinkedinIn color=" #0e76a8" size={30} />
+            </a>
+            <a
+              href="https://api.whatsapp.com/send?phone=75988611282&text=Olá, boa tarde."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IoLogoWhatsapp color="green" size={30} />
+            </a>
+            <a href="mailto:isabel_diana@outlook.com" target="_blank">
+              <SiMicrosoftoutlook size={30} color="#0072c6" />
+            </a>
+          </div>
+
+          <p>
+            Vai um cafezinho? <GiCoffeeCup size={20} color="#964b00" />{" "}
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
