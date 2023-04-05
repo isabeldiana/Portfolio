@@ -82,18 +82,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="certificates">
-          <h1>Certificados:</h1>
-          <a
-            href="https://app.rocketseat.com.br/certificates/9cb12b79-8d0b-47ad-98eb-46d384b4a902"
-            target="_blank"
-          >
-            <TbCertificate /> Trilha Fundamentar - Rocketseat
-          </a>
-          <a href={diploma} target="_blank">
-            <FaUniversity /> Diploma -Uniasselvi
-          </a>
-        </div>
+
         <div className="card-2">
           <h1 id="project"> Projetos:</h1>
           <div className="projects">
@@ -139,6 +128,18 @@ function App() {
           <p>
             Vai um cafezinho? <GiCoffeeCup size={20} color="#964b00" />{" "}
           </p>
+        </div>
+        <div className="certificates">
+          <h1>Certificados:</h1>
+          <a
+            href="https://app.rocketseat.com.br/certificates/9cb12b79-8d0b-47ad-98eb-46d384b4a902"
+            target="_blank"
+          >
+            <TbCertificate /> Trilha Fundamentar - Rocketseat
+          </a>
+          <a href={diploma} target="_blank">
+            <FaUniversity /> Diploma -Uniasselvi
+          </a>
         </div>
       </footer>
     </div>
