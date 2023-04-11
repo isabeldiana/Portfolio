@@ -7,11 +7,25 @@ function Header() {
         <img src={avatar} />
         <h1>Isabel Diana Pereira de Lima</h1>
       </div>
-      <Menu>
-        <a href="#about">Sobre</a>
-        <a href="#project">Projetos</a>
-        <a href="#contact">Contatos</a>
-      </Menu>
+      <input type="checkbox" name="menuA" id="menuop" />
+      <label for="menuop">
+        <div class="menuB">
+          <span class="hamburguer"></span>
+        </div>
+      </label>
+      <div className="menu">
+        <ul>
+          <a href="#about">
+            <li>Sobre</li>
+          </a>
+          <a href="#project">
+            <li>Projetos</li>
+          </a>
+          <a href="#contact">
+            <li>Contatos</li>
+          </a>
+        </ul>
+      </div>
     </Container>
   );
 }

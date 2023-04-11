@@ -4,7 +4,6 @@ export const Container = styled("footer")`
   background-color: #011318;
   margin-top: auto;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   text-align: center;
   margin-top: 30px;
@@ -16,6 +15,13 @@ export const Container = styled("footer")`
     font-family: "Raleway", sans-serif;
     color: #ededed;
     gap: 4px;
+  }
+
+  @media screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   }
 `;
 export const SocialMedia = styled("div")`
@@ -40,7 +46,13 @@ export const Certificate = styled("div")`
     text-align: left;
     font-size: 14px;
     color: #add8e6;
-    text-align: left;
     text-decoration: none;
+  }
+
+  @media screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   margin-top: 10px;
   }
 `;
