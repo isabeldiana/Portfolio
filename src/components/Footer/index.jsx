@@ -11,7 +11,7 @@ function Footer() {
   return (
     <Container>
       <div>
-        <SocialMedia>
+        <SocialMedia id="contacts">
           <a href="https://github.com/isabeldiana" target="_blank">
             <BsGithub color="white" size={30} />
           </a>

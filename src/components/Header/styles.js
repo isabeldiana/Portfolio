@@ -76,11 +76,14 @@ export const Container = styled("header")`
       position: absolute;
       display: flex;
       left: 87%;
-      top: 40px;
+      top: 25px;
       transition: all 300ms linear;
       height: 30px;
       width: 30px;
       cursor: pointer;
+    }
+    ul a:last-child {
+      margin-right: 0;
     }
 
     .menuB {
@@ -129,10 +132,12 @@ export const Container = styled("header")`
     }
 
     input:checked ~ .menu ul {
-      height: 120px;
+      justify-content: flex-end;
+      height: 110px;
+      width: 100vw;
       z-index: 5;
       display: flex;
-      margin-top: -10px;
+      margin-top: 20px;
     }
 
     .menu ul {
@@ -154,9 +159,6 @@ export const Container = styled("header")`
   @media screen and (max-width: 400px) {
     input:checked ~ .menu ul {
       margin-top: 30px;
-      margin-left: 50%;
     }
   }
 `;
-
-export const Menu = styled("div")``;

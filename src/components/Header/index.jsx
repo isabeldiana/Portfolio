@@ -1,5 +1,5 @@
 import avatar from "../../assets/avatar.jpeg";
-import { Container, Menu } from "./styles";
+import { Container } from "./styles";
 function Header() {
   return (
     <Container>
@@ -9,8 +9,8 @@ function Header() {
       </div>
       <input type="checkbox" name="menuA" id="menuop" />
       <label for="menuop">
-        <div class="menuB">
-          <span class="hamburguer"></span>
+        <div className="menuB">
+          <span className="hamburguer"></span>
         </div>
       </label>
       <div className="menu">
@@ -21,7 +21,7 @@ function Header() {
           <a href="#project">
             <li>Projetos</li>
           </a>
-          <a href="#contact">
+          <a href="#contacts">
             <li>Contatos</li>
           </a>
         </ul>
